@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Question Demo</title>
+    <link rel="stylesheet" type="text/css" href="/module/css/Common.css" >
+    <link rel="stylesheet" type="text/css" href="/module/css/question/question.css" >
+    <link rel="stylesheet" type="text/css" href="/module/js/lib/umeditor/themes/default/_css/umeditor.css"  />
+    <!--
+    <script type="text/javascript" charset="utf-8" src="./js/jquery.min.js" ></script>
+    <script type="text/javascript" charset="utf-8" src="./js/umeditor/editor_api.js" ></script>
+    <script type="text/javascript" charset="utf-8" src="./js/question/questionUtils.js" ></script>
+    <script type="text/javascript" charset="utf-8" src="./js/MapUtil.js" ></script>
+    <script type="text/javascript" charset="utf-8" src="./js/raphael.js" ></script>
+    <script type="text/javascript" charset="utf-8" src="./js/paper_line.js" ></script>
+    <script>
+        $(document).ready(function(){
+            questionUtils.newQuestion(1,$("#ArticleBox"));
+            //题型切换
+            $('input[name="questionType"]').click(function(){
+                var val = parseInt($(this).val());
+                questionUtils.newQuestion(val,$("#ArticleBox"));
+            });
+        });
+
+        function getAllHtml() {
+            alert(nq.umutils.um.getContent())
+        }
+        function insertHtml() {
+            var value = prompt('插入html代码', '');
+            nq.umutils.um.execCommand('insertHtml', value)
+        }
+
+    </script>
+    -->
+    <script src="/module/js/lib/seajs/2.2.3/sea-debug.js"></script>
+
+
+
+    <script>
+        function getAllHtml() {
+            alert(nq.umutils.um.getContent())
+        }
+        function insertHtml() {
+            var value = prompt('插入html代码', '');
+            nq.umutils.um.execCommand('insertHtml', value)
+        }
+        seajs.config({
+            base: "/module/js/",
+            alias: {
+                'jquery': 'lib/jquery/jquery-1.7.2'
+            }
+        });
+        seajs.use(['jquery','module/core/MapUtil','module/question/questionUtils','module/question/newQuestion',
+            'lib/umeditor/umeditor','lib/umeditor/umeditor.config','lib/umeditor/lang/zh-cn/zh-cn','lib/umeditor/dialogs/formula/formula',
+            'module/core/common','lang/zh_cn','example/testQuestion']);
+
+    </script>
+</head>
+<body>
+<div class="content">
+    <div>
+        <button onclick="getAllHtml()">获得整个html的内容</button>
+
+        <button onclick="insertHtml()">插入给定的内容</button>
+
+    </div>
+    <div id="content_Right" class="content_Right">
+        <div id="content_title">
+				<span id="content_title_span" class="content_title">
+				         题型：&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="1" checked>单选题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="2">多选题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="3">判断题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="4">填空题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="5">简答题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="6">听力题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="7">综合题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="8">连线题&nbsp;&nbsp;&nbsp;&nbsp;
+				    <input type="radio" name="questionType" value="9">跟读题&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+        </div>
+        <div id="ArticleBox" class="articleBox">
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

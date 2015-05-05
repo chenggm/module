@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../third-party/mathquill/mathquill.css"/>
+    <style>
+        html, body, .main{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .main{
+            width:1024px;
+            height:1024px;
+        }
+        .mathquill-editable,
+        .mathquill-rendered-math{
+            border: 0px;
+            padding: 0px;
+            margin:4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main">
+    <div class="mathquill-editable"></div>
+</div>
+
+<div>
+    <input id="blurHelper" />
+</div>
+
+<script src="/module/js/lib/seajs/2.2.3/sea-debug.js"></script>
+<script>
+    seajs.config({
+        base: "/module/js/",
+        alias: {
+            'jquery': 'lib/jquery/jquery-1.7.2'
+        }
+    });
+    seajs.use(['jquery','lib/umeditor/third-party/mathquill/mathquill','lib/umeditor/dialogs/formula/init']);
+
+</script>
+
+</body>
+</html>

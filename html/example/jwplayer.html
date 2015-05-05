@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<div id="container">Loading the player ...</div>
+<div id="version"></div>
+<!-- 配合nginx使用
+<script src="/module/js/??lib/seajs/2.2.3/sea-debug.js,lib/seajs/2.2.3/seajs-combo-debug.js"></script>
+-->
+<script src="/module/js//lib/seajs/2.2.3/sea-debug.js"></script>
+<script>
+    seajs.config({
+        base: "/module/js/",
+        alias: {
+            'jquery': 'lib/jquery/jquery-1.7.2'
+        }
+    });
+    seajs.use(['jquery','module/core/browser','lib/jwplayer/jwplayer','lib/jwplayer/jwplayer.html5','example/testJwplayer']);
+</script>
+</body>
+</html>

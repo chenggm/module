@@ -1,0 +1,125 @@
+.questionDiv{
+border-top:1px dashed #dbdbdb;
+min-height:150px;
+overflow:hidden;
+}
+.questionSubmitDiv{
+ width:900px;
+ height:50px;
+ background-color: #ddd;
+ margin-top:20px;
+}
+.questionSubmitbutton{
+ width: 100px;
+ height: 30px;
+ background-color:#3C42E5;	
+ margin-top: 10px;
+ cursor: pointer;	
+ color:#fff;
+}
+.options{
+float:right;
+margin-top:20px;
+display:block;
+width:590px;
+overflow:hidden;
+min-height:140px;
+/*padding:3px 3px 0*/;
+}
+.uniqueAnswer{
+  bottom:0px;
+  position:absolute;
+}
+.optioninput{
+width:300px;
+display:inline-block;
+margin:15px 5px 15px;
+}
+.optioninput img{
+	width: 30%;
+    height: 20%;
+}
+.optoperation{
+  display:inline-block;
+  margin:15px 5px 15px;
+  float:right;
+}
+.optionadd{	
+background-color: #ddd;
+text-align: center;
+height: 30px;
+cursor: pointer;	
+}
+.title{
+float:left;
+margin-top:20px;
+margin-left:20px;
+}
+.shortanswer
+{
+float:right;
+display:block;
+width:590px;
+overflow:hidden;
+min-height:140px;
+/*padding:3px 3px 0*/;
+}
+.inputArea{
+float:right;
+margin-top:20px;
+display:block;
+width:590px;
+overflow:hidden;
+min-height:140px;
+/*padding:3px 3px 0*/;
+}
+.inputArea table {
+width: 100%;
+border-collapse: collapse;
+border-spacing: 0px;
+}
+.inputArea table tr td {
+border: 1px #333333 solid;
+height: 30px;
+padding: 5px;
+}
+.inputArea iframe.mathquill-embedded-latex{
+border: 0px;
+padding: 0px;
+display: inline;
+margin: 0px;
+background: none;
+vertical-align: middle;
+width: 0px;
+height: 0px;
+}
+.inputArea p{
+margin:5px 0;
+}
+.inputArea img{
+width: 30%;
+height: 20%;
+}
+
+.childselect{
+    bottom:5px;
+    position:absolute;
+    margin-left:70px;
+}
+
+.line_table{margin-left: -80px;}	/* 连线题展示位置偏左了，修正方向 。原值-80px*/
+.line_table table{border-collapse: separate;border-spacing: 0px; width: 150px;}
+.line_table tr td{border: none; height: auto;}
+.line_button{width:16px; line-height:16px; height:16px;  background:url(../../images/question/lineradio.png); border:none; cursor:pointer;}
+
+.timuLine{border:1px #999 solid;overflow:hidden; border-radius:5px; margin-left:80px; margin-bottom:2px; float:left}
+.timuLine img{width:25px; height:25px;}
+.timuLine p{float:left}
+.timuLine span{float:right}
+.timuLine tr td{padding:0 4px;}
+
+.btn{ display:inline-block; padding:0 20px; height:30px; line-height:30px; font-size:12px; font-weight:normal; color:#fff;margin-left:70px;}
+.btn.green{background: #3C42E5;}
+
+.filebox{ position:relative;float: left;}
+.caseInfoList select{width: 80px;}

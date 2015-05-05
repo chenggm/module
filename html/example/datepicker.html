@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery时间插件</title>
+    <!-- 配合nginx使用
+    <script src="/module/js/??lib/seajs/2.2.3/sea-debug.js,lib/seajs/2.2.3/seajs-combo-debug.js"></script>
+    <link rel="stylesheet" type="text/css" href="/module/css/jquery/??jquery.ui.core.css,jquery.ui.datepicker.css,jquery.ui.theme.css" />
+    -->
+    <link rel="stylesheet" type="text/css" href="/module/css/jquery/jquery.ui.all.css" />
+    <script src="/module/js//lib/seajs/2.2.3/sea-debug.js"></script>
+
+    <style>
+        .ui-timepicker-div dl{clear:left;}
+        .ui-timepicker-div dt,dd{float:left; margin: 0 0 0 5px}
+        .ui-datepicker{width: 230px;}
+        .ui-datepicker .ui-datepicker-buttonpane{margin: 2.5em 0 0 0;}
+
+    </style>
+    <script>
+        seajs.config({
+            base: "/module/js/",
+            alias: {
+                'jquery': 'lib/jquery/jquery-1.7.2'
+            }
+        });
+        seajs.use(['jquery','module/core/common','lang/zh_cn','lib/jquery/jquery.ui.core','lib/jquery/jquery.ui.datepicker','lib/jquery/jquery.ui.timepicker.addon','example/testDatepicker']);
+
+    </script>
+</head>
+<body>
+<div ><input name="" id="finishTime" type="text" class="form-control" value=""></div>
+
+</body>
+</html>

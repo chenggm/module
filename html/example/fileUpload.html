@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FileUpload</title>
+    <script type="text/javascript" charset="utf-8" src="../../../jquery.min.js" ></script>
+    <style>
+        .file2 {
+            float: left;
+            height: 30px;
+            width: 90px;
+            border: 0;
+            background: none;
+            margin: -7px 0 0 -7px;
+            pading: 0;
+            display: block;
+            overflow: hidden;
+            filter: alpha(opacity=0);
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body bgcolor="transparent" style="background:transparent">
+<form id="form1" name="form1" action="${basePath}question/upload/${type}" method="post" enctype="multipart/form-data">
+    <input id="idFile" type="file" class="file2" name="fileData02" accept="audio/mpeg,audio/mp4,video/avi"/>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        init();
+    });
+
+    $("#idFile").bind("change", function () {
+        document.forms["form1"].submit();
+    });
+
+    function init() {
+        var originalFilename = "${originalFilename}";
+        var suffix = "${suffix}";
+        var type = "${type}";
+        //var filePath = "${filePath}";
+        var fileName = "${fileName}";
+
+        if (originalFilename) {
+            var div = $("<div style='width:auto; margin:0 auto; overflow:auto;' suffix='" + suffix + "' fname='" + fileName + "'></div>");
+            div.attr("title", originalFilename);
+            div.append($("<a  href='javascript: void(0);'>&nbsp;&nbsp;" + originalFilename + "</a><img style='margin-left: 10px;' filename='" + fileName + "' src='" + CONTEXT_PATH + "/baseStyle/teacherzone/images/del.png' onclick='delFile(this)' title='删除' />"));
+            if (type == 0) {
+                $("#btUploadDiv", window.parent.document).append(div);
+            }
+            else {
+                $("#jxUploadDiv", window.parent.document).append(div);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

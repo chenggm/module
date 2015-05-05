@@ -1,0 +1,6 @@
+.tw_table_list {margin:9px 20px 20px 5px; border:solid 1px gray; padding-bottom: 5px; position:absolute; z-index:10000; background: #ffffff;width: auto;}
+.tw_table_line {margin-top:5px; margin-left:5px; width:224px;}
+.tw_table_item {width:15px; height:15px; background:#F8F8F8; margin-right:5px; float:left; border:solid 1px gray;}
+.tw_clear {clear:both;}
+
+.blank{width:30px;border:none; display:inline-block; border-bottom:#999 solid 1px; background:none; margin-left: 3px}
